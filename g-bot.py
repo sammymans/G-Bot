@@ -20,9 +20,23 @@ for container in containers:
     Time = container.h4.small.text
     Available=container.h4.small.span.text
 
-    print("Date: "+ Date.strip())
-    print("Time: "+ Time.strip())
-    print("Availability: "+ Available.strip())
+    list = Time.split()
+    
+    newstr = ""
+    i= 0
+    while not list[i].isdigit():
+        newstr += list[i]
+        i += 1
+
+    print(newstr)
+
+    # list = Time.splitlines()
+    # print(list)
+
+
+    #print("Date: "+ Date.strip())
+    #print("Time: "+ Time.strip())
+    #print("Availability: "+ Available.strip())
 
 
 
