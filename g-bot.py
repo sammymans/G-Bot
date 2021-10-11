@@ -12,8 +12,6 @@ page.close()
 
 containers =soup.findAll("div", {"class":"caption program-schedule-card-caption"})
 
-
-
 for container in containers:
 
     Date= container.h4.span.text
@@ -22,21 +20,15 @@ for container in containers:
 
     list = Time.split()
     
-    newstr = ""
-    i= 0
+    times = ""
+    i = 0
     while not list[i].isdigit():
-        newstr += list[i]
+        times += list[i]
         i += 1
 
-    print(newstr)
-
-    # list = Time.splitlines()
-    # print(list)
-
-
-    #print("Date: "+ Date.strip())
-    #print("Time: "+ Time.strip())
-    #print("Availability: "+ Available.strip())
+    print("\nDate: "+ Date.strip())
+    print("Time: "+ times)
+    print("Availability: "+ Available.strip())
 
 
 
