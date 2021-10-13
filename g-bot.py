@@ -2,9 +2,10 @@ import requests
 
 from bs4 import BeautifulSoup
 
+import picking_sport
 import login
 
-my_url= "https://shop.westernmustangs.ca/Program/GetProgramDetails?courseId=7fecf404-873b-44d2-bf86-1910051b3097&semesterId=81dac0e7-2456-44c9-bfe4-6ed494cc6824"
+from picking_sport import my_url
 
 page= requests.get(my_url)
 
@@ -28,9 +29,9 @@ for container in containers:
         times += list[i]
         i += 1
 
-    #print("\nDate: "+ Date.strip())
-    #print("Time: "+ times)
-    #print("Availability: "+ Available.strip())
+    print("\nDate: "+ Date.strip())
+    print("Time: "+ times)
+    print("Availability: "+ Available.strip())
 
 
 
