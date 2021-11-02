@@ -36,7 +36,6 @@ for count, container in enumerate(containers):
 
 time_Option= int(input("Which Option Would You Like?"))-1
 
-print(time_Option)
 
 
 
