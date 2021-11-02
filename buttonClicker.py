@@ -5,9 +5,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from login import username
-from login import password
+#from login import username
+#from login import password
 
+#import gBot
+from gBot import time_Option
+
+print(time_Option)
 
 import time
 
@@ -39,10 +43,10 @@ try:
     element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,"//*[@id='fm1']/fieldset/div[3]/input[4]")))
     element.click()
 
-    element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CSS_SELECTOR,"button.btn-primary")))
-    element.click()
-
-
+    elements= WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,"button.btn-primary")))
+    elements[1].click()
+    
+        
 
 
 except:

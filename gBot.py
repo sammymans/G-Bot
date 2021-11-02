@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 
 import picking_sport
-import login
+
+
 
 from picking_sport import my_url
 
