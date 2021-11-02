@@ -1,8 +1,7 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+PATH = "C:\Program Files (x86)\chromedriver.exe"
+driver = webdriver.Chrome(PATH)
 
-driver.get("https://twitter.com/?lang=en")
+driver.get("https://shop.westernmustangs.ca/Program/GetProgramDetails?courseId=b48c8d0b-4493-4d3c-a4ed-9507063a9062&semesterId=81dac0e7-2456-44c9-bfe4-6ed494cc6824")
 
-driver.find_element_by_class_name("css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0").click()
