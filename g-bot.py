@@ -34,6 +34,10 @@ for count, container in enumerate(containers):
     print("Time: "+ times)
     print("Availability: "+ Available.strip())
 
+time_Option= int(input("Which Option Would You Like?"))-1
+
+print(time_Option)
+
 
 
 
