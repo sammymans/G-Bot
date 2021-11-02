@@ -18,6 +18,7 @@ if saved==0:
     data_file.write("\n")
     password= input("Password: ")   
     data_file.write(password)
+    print("Information Saved")
 else:
     print("OK")
 
