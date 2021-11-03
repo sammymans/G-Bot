@@ -3,22 +3,19 @@ import requests
 from bs4 import BeautifulSoup
 
 import picking_sport
-
-
-
 from picking_sport import my_url
 
-page= requests.get(my_url)
+page = requests.get(my_url)
 
 soup= BeautifulSoup(page.content, 'html.parser')
 
 page.close()
 
-containers =soup.findAll("div", {"class":"caption program-schedule-card-caption"})
+containers = soup.findAll("div", {"class":"caption program-schedule-card-caption"})
 #for container in containers:
 for count, container in enumerate(containers):
 
-    Date= container.h4.span.text
+    Date = container.h4.span.text
     Time = container.h4.small.text
     Available=container.h4.small.span.text
 
@@ -36,9 +33,7 @@ for count, container in enumerate(containers):
     print("Availability: "+ Available.strip())
 
 time_Option= int(input("Which Option Would You Like?"))-1
+print(time_Option)
 
-
-
-
-
+# ------------------------------------------------------------------------------------------------------------------------
 
