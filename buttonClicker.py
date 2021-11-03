@@ -17,7 +17,7 @@ from login import first, last, home, mobile, email, saved2
 import gBot
 from gBot import time_Option
 
-from picking_sport import my_url
+from picking_sport import my_url,sportpicked, pemail, fname, student_id
 #print(time_Option)
 
 import time
@@ -94,19 +94,43 @@ try:
         element.click()
 
     #Click Continue
-    element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="mainContent"]/div[2]/div[2]/a')))
-    element.click()
+    if sportpicked in [1,2,9]:
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="mainContent"]/div[2]/div[2]/a')))
+        element.click()
 
     #Click Yes For Loop
-    for i in range(4):
+    elements= WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,"input#rbtnYes")))
+    for i in range(len(elements)):
         element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.NAME,"CustomPrompts["+str(i)+"].CommonInput")))
         element.click()
     
+    
+    if sportpicked == 2:   
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.NAME,"CustomPrompts[5].CommonInput")))
+        element.click()
+    elif sportpicked == 6:
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.NAME,"CustomPrompts[3].CommonInput")))
+        element.click()
 
-    #Type Yes
-    element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.ID,"CustomPrompts_4__CommonInput")))
-    element.clear()
-    element.send_keys("Yes")
+
+    if sportpicked==7:
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CSS_SELECTOR,"textarea.form-control")))
+        element.clear()
+        element.send_keys(fname+","+student_id+","+pemail)
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.NAME,"CustomPrompts[5].CommonInput")))
+        element.click()
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="CustomPrompts_6__CommonInput"]')))
+        element.clear()
+        element.send_keys("Yes")
+        
+
+    else:
+        #Type Yes
+        element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CSS_SELECTOR,"textarea.form-control")))
+        element.clear()
+        element.send_keys("Yes")
+
+
 
     #Click Add to Cart
     element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="mainContent"]/div[2]/form[2]/div[2]/button[2]')))
@@ -119,14 +143,6 @@ try:
     #Click Checkout Again
     element= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="CheckoutModal"]/div/div[2]/button[2]')))
     #element.click()
-
-    
-
-
-
-
-
-
 
 
 except:

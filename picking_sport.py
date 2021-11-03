@@ -13,6 +13,13 @@ sportslist=open("sporturls.txt")
 
 content= sportslist.readlines()
 
+if sportpicked ==7:
+    print("If you do not have a partner input N/A 3 times")
+    fname= input("Name of partner: ")
+    student_id = input("Partner student number: ")
+    pemail =input("Partner email: ")
+
+
 
 
 
