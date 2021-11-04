@@ -17,9 +17,11 @@ from login import first, last, home, mobile, email, saved2
 import gBot
 from gBot import time_Option
 
-from picking_sport import my_url,sportpicked, pemail, fname, student_id
-#print(time_Option)
+from picking_sport import my_url,sportpicked
+if sportpicked ==7:
+    from picking_sport import pemail, fname, student_id
 
+    
 import time
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
