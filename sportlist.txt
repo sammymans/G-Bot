@@ -1,9 +1,10 @@
-1. WSRC Atrium and Upper Gyms
-2. WSRC Weight Room
-3. Drop In Badminton
-4. Drop In Basketball
-5. Fit Lane Swimming - Deep End 25m
-6. Fit Lane Swimming - Shallow End 25m
-7. Squash Court
-8. TRAC Student Jogging
-9. TRAC Student Skating
+1. Drop In Badminton
+2. Drop In Basketball
+3. Drop In Volleyball
+4. Fit Lane Swimming - Deep End 25m
+5. Fit Lane Swimming - Shallow End 25m
+6. Squash Court 
+7. TRAC Student Jogging
+8. TRAC Student Skating
+9. WRSC Atrium Studio and Upper Gym
+10. WRSC Weight Room
